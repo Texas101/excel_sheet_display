@@ -2,7 +2,7 @@
 Author: Tejas Narayanan
 Date: 5/31/20
 """
-
+from pathlib import Path
 
 def check_should_continue(user_input):
     """
@@ -15,7 +15,9 @@ def check_should_continue(user_input):
     return True
 
 def check_user_entered_filename(user_input):
-    pass
+    if Path(user_input).exists():
+        return True
+    return False
 
 def check_user_selected_sheetname(user_input):
     pass
@@ -29,7 +31,7 @@ while should_continue:
     should_continue = check_should_continue(in1)
     filename = ''
     if check_user_entered_filename(in1):
-        pass
+        print(f"file exists! {in1}")
         # do something with filename
     elif check_user_selected_sheetname(in1):
         pass
