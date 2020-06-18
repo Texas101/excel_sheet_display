@@ -60,12 +60,12 @@ class GameManager:
                     # self.run_flag(self.{in2})
 
                     #TODO: What would happen if they tried to flag multiple people and it all went to the variable in2?
-                if inputs[0] == 'TEST':
+                elif inputs[0] == 'TEST':
                     # in3 = int(input('What number would you like to Test?'))
                     self.run_test(int(inputs[1])) #TODO: person_list in place for like person in the list. idk how to say dat
                     self.spread_infection()
 
-                if inputs[0] == 'CURE':
+                elif inputs[0] == 'CURE':
                     # in4 = int(input('What number would you like to Cure?'))
                     self.run_cure(int(inputs[1]))
                     self.spread_infection()
